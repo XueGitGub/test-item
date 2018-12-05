@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>修改密码</title>
+    <link rel="stylesheet" href="./jq/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .body{
+            text-align: center;
+            font-size: 30px;
+            line-height: 70px;
+        }
+        .body p{
+            float: left;
+            margin-left: 55px;
+        }
+        .body input{
+            border: none;
+            border: 1px solid #c2c2c2;
+            background: #f4f4f4;
+            width: 300px;
+            height: 50px;
+            border-radius:10px;
+        }
+        .body button{
+            width: 300px;
+            height: 65px;
+            border-radius:10px;
+            background: #25252f;
+            color: #fff;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <img src="./images/返回_03.gif" alt="" srcset="">
+        <h1>修改密码</h1>
+    </div>
+    <div class="body">
+        <p>登录密码：</p>
+        <input type="password" placeholder="填写当前登陆密码">
+        <p>设置新密码：</p>
+        <input type="password" placeholder="6~20位字母 数字组合">
+        <p>确认新密码：</p>
+        <input type="password" placeholder="6~20位字母 数字组合">
+        <button>完成</button>
+    </div>
+    <script src="./js/jquery-1.11.3.min.js"></script>
+</body>
+</html>
