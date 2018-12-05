@@ -8,9 +8,33 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <style>
         .head h1 {
-            margin-right: 70px; 
+            margin-right: 20px;
+            margin-top: 27px;
+        }
+
+        .body textarea {
+            width: 350px;
+            height: 200px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+
+        .an1 {
+            width: 65px;
+            height: 35px;
+            margin-top: 30px;
+            margin-right: 5px;
+            color: #fff;
+            background: #494961;
+            border: none;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            font-size: 17px;
+            line-height: 35px;
         }
     </style>
 </head>
@@ -18,7 +42,11 @@
 <body>
     <div class="head">
         <img src="../images/返回_03.gif" alt="" srcset="">
-        <h1>设置</h1>
+        <h1>意见反馈</h1>
+        <button class="an1">发送</button>
+    </div>
+    <div class="body">
+        <textarea class="form-control" rows="3" placeholder="请输入反馈，我们将为您不断改进"></textarea>
     </div>
 </body>
 
