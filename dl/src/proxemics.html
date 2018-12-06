@@ -20,7 +20,61 @@
                 <div class="cont_wp">
                     <div class="zh_wp">
                         
+                        <div class="upload">
+                            <p>设置头像</p>
+                            <form>
+                                <input type="file" />
+                            </form>
+                        </div>
+                        <div class="logo">
+                            <img src="../images/tx.png" />
+                        </div>
                     </div>
+                </div>
+                <div class="conter">
+                    <div class="xg">
+                        <span class=" iconfont icon-check-circle xgxx"></span>
+                        <p>
+                            <span class="">修改昵称</span>
+                            <input type="text" placeholder="monakeity" class="nc">
+                        </p>
+                    </div>
+                    <div class="xq">
+                        <span class="iconfont icon-location xgxx"></span>
+                        <p>
+                            <span class="dz">我的收货地址</span>
+                            <span class="dz dz_k"> &gt; </span>
+                        </p>
+                    </div>
+                    <div class="xw">
+                        <span class="iconfont icon-zhongfumima xgxx"></span>
+                        <p>
+                            <span class="mm">修改登录密码</span>
+                            <span class="mm mm_k"> &gt; </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="btm">
+                    <ul>
+                        <li>
+                            <span class="iconfont icon-shop"></span>
+                            <span>商城</span>
+                        </li>
+                        <li>
+                            <span class="iconfont icon-unorderedlist"></span>
+                            <span>分类</span>
+                        </li>
+                        <li>
+                            <span class="iconfont icon-gouwuchekong1"></span>
+                            <span>购物车</span>
+                        </li>
+                        <li class="active">
+                            <span class="iconfont icon-user active"></span>
+                            <span class="active">我的</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
             
@@ -28,6 +82,35 @@
 
         <script src="../js/flexible.js"></script>
         <script src="../js/flexible_css.js"></script>
+        <script src="../js/jquery-1.11.3.min.js"></script>
+        <script>
+            var iMaxFilesize = 2097152; //2M
+            window.fileSelected = function() {
+                var oFile = document.getElementById('upload').files[0];    //读取文件
+                var rFilter = /^(image\/bmp|image\/gif|image\/jpeg|image\/png|image\/tiff)$/i;
+                if (!rFilter.test(oFile.type)) {
+                    alert("文件格式必须为图片");
+                    return;
+                }
+                if (oFile.size > iMaxFilesize) {
+                    alert("图片大小不能超过2M");
+                    return;
+                }
+                var vFD = new FormData(document.getElementById('uploadForm')),    //建立请求和数据
+                    oXHR = new XMLHttpRequest();
+                oXHR.addEventListener('load', function(resUpload) {
+                    //成功
+                }, false);
+                oXHR.addEventListener('error', function() {
+                    //失败
+                }, false);
+                oXHR.addEventListener('abort', function() {
+                    //上传中断
+                }, false);
+                oXHR.open('POST', actionUrl);
+                oXHR.send(vFD);
+            };
+        </script>
     
 </body>
 </html>
