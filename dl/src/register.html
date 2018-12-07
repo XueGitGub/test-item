@@ -20,11 +20,32 @@
                 <div class="cont">
                     <div class="cont_wp">
                         <div class="zh_wp">
-                            <p><label for="sjh" class="iconfont icon-mobile"></label><input type="text" placeholder="手机号" id="sjh"> <span class="hq">获取验证码</span></p>
-                            <p><label for="yzm" class="iconfont icon-yanzhengma"></label><input type="text" placeholder="验证码" id="yzm"></p>
-                            <p><label for="mm" class="iconfont icon-unlock"></label><input type="text" placeholder="密码" id="mm"></p>
-                            <p><label for="cfmm" class="iconfont icon-zhongfumima"></label><input type="text" placeholder="重复密码" id="cfmm"></p>
-                            <p><label for="nc" class="iconfont icon-nicheng"></label><input type="text" placeholder="昵称" id="nc"></p>
+
+                            <div class="sjj">
+
+                                <label for="sjh" class="iconfont icon-mobile"></label>
+                                <p class="one_p">
+                                    <input type="text" placeholder="手机号" id="sjh"> 
+                                    <span class="hq" id="hq">获取验证码</span>
+                                </p>
+                                
+                            </div>
+                            <p>
+                                <label for="yzm" class="iconfont icon-yanzhengma"></label>
+                                <input type="text" placeholder="验证码" id="yzm">
+                            </p>
+                            <p>
+                                <label for="mm" class="iconfont icon-unlock"></label>
+                                <input type="password" placeholder="密码" id="mm">
+                            </p>
+                            <p>
+                                <label for="cfmm" class="iconfont icon-zhongfumima"></label>
+                                <input type="password" placeholder="重复密码" id="cfmm">
+                            </p>
+                            <p>
+                                <label for="nc" class="iconfont icon-nicheng"></label>
+                                <input type="text" placeholder="昵称" id="nc">
+                            </p>
                         </div>
                         <button class="btn_zc">注册</button>
                           
@@ -37,9 +58,104 @@
     <script src="../js/flexible_css.js"></script>
     <script src="../js/jquery-1.11.3.min.js"></script>
     <script>
+
+
+        var code; 
         $(".fh").click(function(){
             location.href = "index.html"
         });
+
+        $(".btn_zc").click(function(){
+                $sjh = document.getElementById("sjh").value;
+                $hq = document.getElementById("hq").value;
+                if(!(/^1(3|4|5|6|7|8)\d{9}$/.test($sjh))){ 
+                    alert("手机号码有误，请重填");  
+                    return false; 
+                };
+
+                
+                var inputCode = $("#yzm").val(); 
+                console.log(inputCode);
+                if(inputCode.length == "") { //若输入的验证码长度为0
+                    alert("请输入验证码！"); //则弹出请输入验证码
+                    return;
+                }else if(inputCode != code) { //若输入的验证码与产生的验证码不一致时
+                    alert("验证码输入错误!请重新输入"); //则弹出验证码输入错误
+                    return false;
+                };
+                
+                var paswd = $("#mm").val();
+                var paswds = $("#cfmm").val();
+                if (paswd == '') {
+                    alert("密码不能为空！");
+                    return false;
+                }else if (paswd.length < 6 || paswd.length > 16) {
+                    alert('用户密码长度为6~16位！');
+                    return;
+                }else if (paswd !== paswds) {
+                    alert('两次密码输入不一样,请重新输入！');
+                    return;
+                }
+                
+                var nc = $("#nc").val();
+                if(nc == ''){
+                    alert('请输入昵称！');
+                    return;
+                }
+                if(nc.length > 10){
+                    alert('最多输入10个字符!');
+                    return;
+                }
+
+
+
+
+
+
+
+
+
+                
+
+
+
+
+                alert('注册成功');
+                return true;
+            
+            
+        });
+       
+        $(document).ready(function() { 
+            //我写的验证码 
+            //验证码 
+            function createCode(){ 
+                code = '';//首先默认code为空字符串 
+                var codeLength = 4;//设置长度，这里看需求，我这里设置了4 
+                var codeV = $("#hq"); 
+                //设置随机字符 
+                var random = new Array(
+                    '1','2','3','4','5','6','7','8','9','0',
+                    'a','b','c','d','e','f','g','h','i','j', 
+                    'k','l','m','n','o','p','q','r','s','t', 
+                    'u','v','w','x','y','z', 
+                ); 
+                for(var i = 0; i < codeLength; i++){ //循环codeLength 我设置的4就是循环4次   
+                var index = Math.floor(Math.random()*36); //设置随机数范围,这设置为0 ~ 36  
+                code += random[index]; //字符串拼接 将每次随机的字符 进行拼接 
+            } 
+                codeV.text(code);//将拼接好的字符串赋值给展示的Value 
+            } 
+            //页面开始加载验证码 
+            // createCode(); 
+            //验证码Div加载点击事件 
+            $("#hq").bind('click',function() { 
+                createCode(); 
+            }); 
+            
+        }); 
+
     </script>
+    
 </body>
 </html>

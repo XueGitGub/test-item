@@ -21,7 +21,7 @@
 
                 <div class="zh_wp">
                     <p><label for="zh" class="iconfont icon-nicheng"></label><input type="text" placeholder="邮箱账号或手机号" id="zh"></p>
-                    <p><label for="mm" class="iconfont icon-unlock"></label><input type="text" placeholder="密码" id="mm"></p>
+                    <p><label for="mm" class="iconfont icon-unlock"></label><input type="password" placeholder="密码" id="mm"></p>
                 </div>
                 <button class="btn_dl">登录</button>
                 <button class="btn_zc">注册</button>
@@ -71,6 +71,29 @@
         $(".qq_wp").click(function(){
             alert("无法获取第三方权限！");
         });
+        
+        $(".btn_dl").click(function(){ 
+            $user_name = document.getElementById("zh").value;
+            $user_pwd = document.getElementById("mm").value;
+            if ($user_name == '') {
+                alert("用户名不能为空！");
+                return false;
+            }
+            if ($user_pwd == '') {
+                alert("密码不能为空！");
+                return false;
+            }
+            if ($user_pwd.length < 6 || $user_pwd.length > 16) {
+                alert('用户密码长度为6~16位！');
+                return;
+            }
+            alert('登录成功！');
+            location.href = "prople.html";
+            return true;
+        });
+        
+        
+        
 
     </script>
 </body>

@@ -1,0 +1,237 @@
+.px2rem(@prop, @px){
+    @{prop}: @px / 75 * 1rem;
+}
+
+.nav{
+    .px2rem(height,110);
+    background-color: #494961;
+    display: flex;
+    justify-content: space-between;
+    .fh{
+        .px2rem(font-size,30);
+        color: #fff;
+        .px2rem(line-height,110);
+        .px2rem(margin-left,10);
+    }
+    .grxx{
+        .px2rem(font-size,30);
+        color: #fff;
+        .px2rem(line-height,110);
+    }
+    
+}
+
+.cont{
+    background-color: #f3f2f2;
+    overflow: hidden;
+    height: 91vh;
+}
+
+.conter{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+}
+.menu{
+    width: 90%;
+    margin: 0 auto;
+    .px2rem(margin-top, 50);
+}
+.menu_q{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img{
+        .px2rem(margin,20);
+    }
+    .menu_gr{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 76%;
+        .gr_l h4{
+            .px2rem(font-size, 50);
+            .px2rem(padding-bottom,10);
+        }
+        p{
+            color: #8b8b8b;
+
+        }
+        span{
+            .px2rem(font-size,40);
+            color: #8b8b8b;
+        }
+    }
+}
+
+.menu_w{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img{
+        .px2rem(margin,20);
+    }
+    .menu_dd{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 76%;
+        .gr_l1 h4{
+            .px2rem(font-size, 50);
+            .px2rem(padding-bottom,10);
+        }
+        p{
+            color: #8b8b8b;
+
+        }
+        span{
+            color: #8b8b8b;
+            .px2rem(font-size,40);
+        }
+    }
+}
+.menu_e{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img{
+        .px2rem(margin,20);
+    }
+    .menu_sc{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 76%;
+        .gr_l2 h4{
+            .px2rem(font-size, 50);
+            .px2rem(padding-bottom,10);
+        }
+        p{
+            color: #8b8b8b;
+
+        }
+        span{
+            color: #8b8b8b;
+            .px2rem(font-size,40);
+        }
+    }
+}
+.menu_r{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img{
+        .px2rem(margin,20);
+    }
+    .menu_sz{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 76%;
+        .gr_l3 h4{
+            .px2rem(font-size, 50);
+            .px2rem(padding-bottom,10);
+        }
+        p{
+            color: #8b8b8b;
+
+        }
+        span{
+            color: #8b8b8b;
+            .px2rem(font-size,40);
+        }
+    }
+}
+.cont_wp{
+    background: url(../images/grbg.png);
+    .px2rem(height,400);
+    background-size: cover;
+}
+.zh_wp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    .px2rem(width,175);
+    .px2rem(height,175);
+    .px2rem(margin-top,80);
+    .px2rem(margin-left,180);
+    overflow: hidden;
+}
+.logo img{
+    display:block;
+    margin: 0 auto;
+    .px2rem(width,175);
+    .px2rem(height,175);
+}
+.gxwm{
+    .px2rem(width,200);
+    .px2rem(height,80);
+    p{
+        .px2rem(font-size,60);
+        .px2rem(margin-left,-130);
+        .px2rem(margin-top,20);
+    }
+}
+// .upload{
+//     position: relative;
+//     width: 80px;
+//     height: 40px;
+//     line-height: 40px;
+//     // background: rgb(84, 243, 243);
+//     text-align: center;
+//     color: #FFF;
+//     padding: 0px 5px;
+//     -webkit-border-radius: 2px;
+//     border-radius: 2px;
+//     font-size: 20px;
+//     margin-left: 50px;
+//     margin-top: 50px;
+// }
+// .upload form{
+//     width:100%;
+//     position:absolute; 
+//     left:0;
+//     top:0;
+//     opacity:0;
+//     filter:alpha(opacity=0);
+// }
+// .upload form input{
+//     width: 100%;
+// }
+.conter{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #25252f;
+    width: 100%;
+    .px2rem(height,100);
+    .btm{
+        width: 96%;
+        margin: 0 auto;
+        ul{
+            display: flex;
+            li{
+                flex: 1;
+                text-align: center;
+                .px2rem(line-height,100);
+                .px2rem(font-size,30);
+                color: #969696;
+            }
+        }
+    }
+}
+.active{
+    color: #e55e60;
+}

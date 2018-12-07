@@ -1,19 +1,19 @@
 .nav {
-  height: 60px;
+  height: 1.46666667rem;
   background-color: #494961;
   display: flex;
   justify-content: space-between;
 }
 .nav .fh {
-  font-size: 30px;
+  font-size: 0.4rem;
   color: #fff;
-  line-height: 60px;
-  margin-left: 10px;
+  line-height: 1.46666667rem;
+  margin-left: 0.13333333rem;
 }
 .nav .grxx {
-  font-size: 24px;
+  font-size: 0.4rem;
   color: #fff;
-  line-height: 60px;
+  line-height: 1.46666667rem;
 }
 .nav .wc {
   font-size: 20px;
