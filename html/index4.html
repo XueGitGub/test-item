@@ -64,7 +64,7 @@
         .body dl dd span {
             font-size: .45rem;
             color: #ccc;
-            margin-left: 1.9rem;
+            margin-left: 2.5rem;
         }
 
         .body dl dt img {
@@ -140,7 +140,6 @@
                 <span>
                     <label class="switch1">
                         <input type="checkbox">
-                        <!-- <span></span> -->
                     </label>
                 </span>
             </dd>
@@ -149,12 +148,12 @@
             <dt><img src="../images/3333.gif" alt="" srcset=""></dt>
             <dd>
                 <h1>关于</h1>
-                <span class="guangyu"> &gt;</span>
+                <span class="guangyu"></span>
             </dd>
         </dl>
     </div>
     <div class="wei">
-        <p>退出当前账号</p>
+        <p class="tuichu">退出当前账号</p>
     </div>
     <script src="../flexible/flexible.debug.js"></script>
     <script src="../flexible/flexible_css.debug.js"></script>
@@ -165,6 +164,10 @@
         });
         $(".fanhuizhuye").click(function(){
             location.href = '../dl/src/prople.html'
+        });
+        $(".tuichu").click(function(){
+            confirm("确定要退出？")
+            location.href = '../dl/src/index.html'
         });
     </script>
 </body>
