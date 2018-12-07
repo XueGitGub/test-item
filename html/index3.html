@@ -12,7 +12,7 @@
         .head {
             height: 1.6875rem;
             line-height: 1.6875rem;
-            font-size: .875rem;
+            font-size: .575rem;
             text-align: center;
             color: #fff;
             background: #494961;
@@ -27,6 +27,7 @@
         .head h1 {
             margin-right: 1.75rem;
             margin-top: .25rem;
+            
         }
         .wei{
             width: 100%;
@@ -203,7 +204,7 @@
             <dt><img src="../images/gwwc_03.gif" alt="" srcset=""></dt>
             <dd>购物车</dd>
         </dl>
-        <dl>
+        <dl class="wode">
             <dt><img src="../images/wode_03.gif" alt="" srcset=""></dt>
             <dd>我的</dd>
         </dl>
@@ -213,6 +214,9 @@
     <script src="../js/jquery-1.11.3.min.js"></script>
     <script>
         $(".fanhuizhuye").click(function(){
+            location.href = '../dl/src/prople.html'
+        });
+        $(".wode").click(function(){
             location.href = '../dl/src/prople.html'
         });
     </script>
