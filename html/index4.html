@@ -122,8 +122,8 @@
         <dl>
             <dt><img src="../images/huojian.gif" alt="" srcset=""></dt>
             <dd>
-                <h1>清除缓存</h1>
-                <span>100M</span>
+                <h1 class="qingchu">清除缓存</h1>
+                <span class="huancun">100M</span>
             </dd>
         </dl>
         <dl>
@@ -164,6 +164,11 @@
         });
         $(".fanhuizhuye").click(function(){
             location.href = '../dl/src/prople.html'
+        });
+        $(".qingchu").click(function(){
+            confirm("是否清除缓存");
+            $(".huancun").html("0M");
+            
         });
         $(".tuichu").click(function(){
             confirm("确定要退出？")
