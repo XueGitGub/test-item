@@ -20,7 +20,7 @@
             background: #25252f;
             position: fixed;
             bottom: 0;
-            color: #969696;
+            color: #969696; 
             font-size: 20px;
         }
         .hong{
@@ -36,11 +36,32 @@
             float: left;
             margin-top: 5px;
         }
+        .wei dl dd{
+            float: left;
+            margin-left: 8px;    
+        }
         .wei dl dt img{
             width: 30px;
             height: 30px;
             background: #25252f;
         }
+        .nav{
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            background: #f3f2f2; 
+        }
+        .nav input{
+            width: 250px;
+            height: 35px;
+            border-radius:30px;
+            border: none;
+            border: 1px solid #fff;
+        }
+        li { 
+            list-style: none; 
+        }
+        
     </style>
 </head>
 
@@ -48,8 +69,20 @@
     <div class="head">
         <img src="../images/返回_03.gif" alt="" srcset="">
         <h1>分类</h1>
-    </div> 
+    </div>
+    <div class="nav">
+        <input type="text" value="搜索你想要的宝贝" class="" name="" id="">
+    </div>
+    <div class="body">
+        <ul>
+            <li> <a herf="javascript:;">一级标题 1</a> <span></span>
+                <div class="submenu">
+                    <div class="subright" style="background-color: antiquewhite"> </div>
+                </div>
+            </li>
+        </ul>
 
+    </div>
     <div class="wei">
         <dl>
             <dt><img src="../images/shengchang_03.gif" alt=""></dt>
@@ -69,7 +102,7 @@
         </dl>
     </div>
     <script src="../flexible/flexible.debug.js"></script>
-    <script src="../flexible/flexible_css.debug.js"></script> 
+    <script src="../flexible/flexible_css.debug.js"></script>
 </body>
 
 </html>
